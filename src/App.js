@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'; 
+import { Button } from './Button.js'; 
+import { Note } from './Note.js'; 
+import './App.css'; 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          linkk
-        </a>
-      </header>
-    </div>
-  );
-}
+function App() { 
+  
+  const [components, setComponents] = useState([""]); 
+  
+  function addComponent() { 
+    
+    setComponents([...components, ""]) 
+    
+  } 
+  
+  return ( 
+    
+    <div > 
+    
+      <Button onClick={addComponent} text="New note"/> 
+      {components.map((item, i) => ( <Note text={item} /> ))} 
+      
+    </div> 
+    
+  ) 
+  
+} 
 
 export default App;
