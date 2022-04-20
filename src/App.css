@@ -22,21 +22,40 @@
 }
 
 .style {
-  background-color: lightblue;
+  background-color: rgb(173, 216, 230);
   border: none;
   font-size: 22px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
 }
-::-webkit-scrollbar {
+  ::-webkit-scrollbar {
   width: 15px;
   }
   ::-webkit-scrollbar-thumb {
-  background: lightslategray;
-  }
-  ::-webkit-scrollbar-track {
-  background: lightblue;
-  border-left: 1px solid lightblue;
-  }
-  ::-webkit-resizer {
   background: lightseagreen;
-  } 
+  }
+ 
+  .handle {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightseagreen;
+    width: 100%;
+    cursor: move;
+    
+  }
+
+  .pic {   
+    color: white;
+    background-color: lightseagreen;
+    }  
+
+  .remove {  
+    background-color: blueviolet; 
+    }
+
+  .trash {
+    color: white;
+    background-color: blueviolet;
+    }
+
+  
