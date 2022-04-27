@@ -6,19 +6,32 @@ import './App.css';
 function App() { 
   
   const [components, setComponents] = useState([""]); 
+ 
   
+
+
   function addComponent() { 
     
     setComponents([...components, ""]) 
     
+    console.log(components);
   }   
+
+  const removeComponent = () => {
+
+     
+  
+    
+  }
+  
   
   return ( 
     
     <div > 
     
-      <Button onClick={addComponent} text="New note"/> 
-      {components.map((item, i) => ( <Note text={item} /> ))} 
+      <Button  onClick={addComponent} text="New note"/> 
+      
+      {components.map((component, index) =>  ( <Note text={component} onClick={removeComponent(index)}/> ))} 
       
     </div> 
     

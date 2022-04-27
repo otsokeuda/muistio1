@@ -28,11 +28,13 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   outline: none;
 }
+
   ::-webkit-scrollbar {
-  width: 15px;
+    width: 15px;
   }
+
   ::-webkit-scrollbar-thumb {
-  background: lightseagreen;
+    background: lightseagreen;
   }
  
   .handle {
@@ -50,12 +52,12 @@
     }  
 
   .remove {  
-    background-color: blueviolet; 
+    background-color: grey; 
     }
 
   .trash {
     color: white;
-    background-color: blueviolet;
+    background-color: grey;
     }
 
   

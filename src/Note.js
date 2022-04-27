@@ -1,15 +1,11 @@
-import React, { Component } from 'react'; 
+import React from 'react'; 
 import Draggable from "react-draggable";
 import { RiDragMove2Fill } from "react-icons/ri";
 import { FiTrash2 } from "react-icons/fi";
 
 
 const Note = (props) => {
-
-    function removeComponent () {
-        alert()
-    }
-    
+ 
 return ( 
     
     <div className="Component"> 
@@ -19,7 +15,7 @@ return (
         
             <div className="handle"><RiDragMove2Fill className='pic'/>
             
-            <button className='remove' onClick={removeComponent}><FiTrash2 className='trash'/></button>
+            <button className='remove' onClick={props.onClick}><FiTrash2 className='trash'/></button>
             
             </div>
 
