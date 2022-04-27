@@ -42,7 +42,7 @@
     justify-content: space-between;
     background-color: lightseagreen;
     width: 100%;
-    cursor: move;
+    cursor:grab;
     
   }
 
@@ -53,6 +53,7 @@
 
   .remove {  
     background-color: grey; 
+    cursor: pointer;
     }
 
   .trash {
