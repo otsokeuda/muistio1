@@ -5,33 +5,43 @@ import './App.css';
 
 function App() { 
   
-  const [components, setComponents] = useState([""]); 
+  const [components, setComponents] = useState([]); 
  
   
 
 
   function addComponent() { 
     
-    setComponents([...components, ""]) 
+    setComponents([...components, {
+      id: components.length + 1,
+      description: "",
+      completed: false
+    }]) 
     
     console.log(components);
   }   
 
-  const removeComponent = () => {
+  function removeComponent(id) {
 
-     
-  
-    
+    const updated = components.map(tehtava => {
+      if (tehtava.id === id) {
+        return {...tehtava, completed: true}
+      }
+      return tehtava;
+    });
+    setComponents(updated);
+    console.log(updated);
   }
   
   
+
   return ( 
     
     <div > 
     
       <Button  onClick={addComponent} text="New note"/> 
       
-      {components.map((component, index) =>  ( <Note text={component} onClick={removeComponent(index)}/> ))} 
+      {components.map((tehtava) =>  ( <Note text={tehtava} klikkaus={removeComponent} thId={tehtava.id} valmis={tehtava.completed}/> ))} 
       
     </div> 
     

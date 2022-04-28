@@ -5,6 +5,8 @@ import { FiTrash2 } from "react-icons/fi";
 
 
 const Note = (props) => {
+
+    if (props.valmis === false ) {
  
 return ( 
     
@@ -15,7 +17,7 @@ return (
         
             <div className="handle"><RiDragMove2Fill className='pic'/>
             
-            <button className='remove' onClick={props.onClick}><FiTrash2 className='trash'/></button>
+            <button className='remove' onClick={() => props.klikkaus(props.thId)}><FiTrash2 className='trash'/></button>
             
             </div>
 
@@ -26,7 +28,7 @@ return (
     
     </div>
     
-  );   
+  )}
 }; 
 
 export {Note};
