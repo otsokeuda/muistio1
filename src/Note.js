@@ -10,9 +10,9 @@ const Note = (props) => {
  
 return ( 
     
-    <div className="Component"> 
+    <div className="Component" > 
     
-    <Draggable handle=".handle">       
+    <Draggable handle=".handle" >       
         <div>
         
             <div className="handle"><RiDragMove2Fill className='pic'/>

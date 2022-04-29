@@ -37,12 +37,12 @@ function App() {
 
   return ( 
     
-    <div > 
+    <div> 
     
       <Button  onClick={addComponent} text="New note"/> 
-      
+      <div   className="note">
       {components.map((tehtava) =>  ( <Note text={tehtava} klikkaus={removeComponent} thId={tehtava.id} valmis={tehtava.completed}/> ))} 
-      
+      </div>
     </div> 
     
   ) 

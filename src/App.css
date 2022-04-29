@@ -17,8 +17,16 @@
 
 .Component {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 15px;
+  flex-wrap: nowrap;
+}
+
+.note {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
 }
 
 .style {
